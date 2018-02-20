@@ -81,7 +81,7 @@ app.directive("jeimesGrid",function(){
 						if(criterios.Criteria.specialGrid){
                             				special = true;
 						}
-						$scope.$parent.$parent.$parent.buildItensToSend(dataItem, checked, criterios.Criteria.status, special);
+						 $scope.$emit('buildItensToSend', {'dataItem': dataItem, 'checked': checked, 'status': criterios.Criteria.status, 'special': special});
 						if (checked) {
 							//-select the row
 							row.addClass("k-state-selected");
